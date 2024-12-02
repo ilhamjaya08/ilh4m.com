@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
+    "@lottiefiles/lottie-player": "^2.0.12",
+    "@lottiefiles/react-lottie-player": "^3.5.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.12.0",
