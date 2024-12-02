@@ -16,7 +16,7 @@ const footerLinks: FooterLink[] = [
 
 const Footer: FC = () => {
   return (
-    <footer className="fixed bottom-0 w-full z-50">
+    <footer className=" bottom-0 w-full z-50">
       <div className="bg-neoYellow-300 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] px-8 py-6 animate-in slide-in-from-bottom duration-500">
         <div className="flex flex-col items-center gap-6">
           <div className="space-y-2 text-center">
