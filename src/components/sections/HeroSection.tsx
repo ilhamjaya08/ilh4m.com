@@ -12,18 +12,27 @@ export const HeroSection = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <motion.div
           initial={{ x: -100 }}
-          animate={{ x: 0 }}
+          animate={{ 
+            x: 0,
+            y: [-10, 10, -10],
+          }}
+          transition={{
+            y: {
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
           className="flex items-center justify-center"
         >
           <Image
-            src="/hero-illustration.svg"
+            src="/developer.svg"
             alt="Hero Illustration"
-            width={500}
-            height={500}
+            width={350}
+            height={350}
             priority
           />
-        </motion.div>
-        <motion.div
+        </motion.div>        <motion.div
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           className="flex flex-col justify-center"
