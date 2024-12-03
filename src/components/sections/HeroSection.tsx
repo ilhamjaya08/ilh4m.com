@@ -33,24 +33,28 @@ export const HeroSection = () => {
         </motion.div>        <motion.div
           initial={{ x: 100 }}
           animate={{ x: 0 }}
-          className="flex flex-col justify-center"
+          className="flex flex-col justify-center items-center text-center"
         >
-          <h1 className="text-5xl font-bold mb-4">Hi, I'm
+          <h1 className="text-6xl font-bold mb-2">Muhammad Ilham Jaya</h1>
+          <div className="text-3xl">
+            I'm a{" "}
             <TypeAnimation
               sequence={[
-                'Developer',
+                'Software Engineer',
                 2000,
-                'Designer',
+                'Web Developer',
                 2000,
-                'Creator',
+                'Student',
+                2000,
+                'Chill Guy',
                 2000,
               ]}
               wrapper="span"
               repeat={Infinity}
-              className="ml-2"
+              className="font-semibold"
             />
-          </h1>
-          <p className="text-xl">Creating awesome digital experiences with neo-brutalist style</p>
+          </div>
+          <p className="text-xl mt-4">Passionate developer crafting innovative solutions with clean and efficient code</p>
         </motion.div>
       </div>
     </motion.section>
