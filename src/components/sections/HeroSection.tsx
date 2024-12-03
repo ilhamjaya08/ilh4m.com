@@ -11,7 +11,7 @@ export const HeroSection = () => {
     <motion.section 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen flex items-center px-8 bg-[#FFE5E5]"
+      className="min-h-screen flex items-center px-8 pb-8 md:pb-0 bg-[#FFE5E5]"
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <motion.div
