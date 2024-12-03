@@ -7,8 +7,7 @@ import Head from "next/head";
 
 const dmsans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '700', '900'],
-  variable: '--font-inter',
+  weight: ['400', '700', '900']
 });
 
 export default function Home() {
