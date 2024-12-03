@@ -5,7 +5,7 @@ import { NavigationSection } from "@/components/sections/NavigationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import Head from "next/head";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
-
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
 const dmsans = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '700', '900']
@@ -30,6 +30,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <ProjectsSection />
         <NavigationSection />
         <ContactSection />
       </div>
