@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Icon } from "@iconify/react";
+import { Icon, loadIcon } from "@iconify/react";
+import { useEffect, useState } from "react";
 
 export const ExperienceSection = () => {
   const techStacks = [
@@ -65,7 +66,6 @@ export const ExperienceSection = () => {
             Experience & Skills
           </motion.h2>
 
-          {/* Tech Stack Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
             {techStacks.map((stack, index) => (
               <motion.div
@@ -81,18 +81,51 @@ export const ExperienceSection = () => {
                   <h3 className="text-xl font-bold">{stack.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {stack.skills.map((skill) => (
-                    <span key={skill} className="bg-white px-3 py-1 border-2 border-black flex items-center gap-1">
-                      <Icon icon={`simple-icons:${skill.toLowerCase().replace('.', 'dot')}`} className="w-4 h-4" />
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+                  {stack.skills.map((skill) => {
+                    const getWorkingIcon = async (skill: string) => {
+                        const iconName = skill.toLowerCase().replace('.', 'dot')
+                        
+                        try {
+                          const providers = [
+                            `simple-icons:${iconName}`,
+                            `devicon:${iconName}`,
+                            `skill-icons:${iconName}`,
+                            `logos:${iconName}`
+                          ]
+                          
+                          for (const provider of providers) {
+                            const iconExists = await loadIcon(provider)
+                            if (iconExists) {
+                              return provider
+                            }
+                          }
+                      
+                          return 'mdi:code-tags'
+                          
+                        } catch {
+                          return 'mdi:code-tags'
+                        }
+                      }
+                      
+                      const [iconSet, setIconSet] = useState('mdi:code-tags')
+                      
+                      useEffect(() => {
+                        getWorkingIcon(skill).then(icon => setIconSet(icon))
+                      }, [skill])
+                      
+                      return (
+                        <span key={skill} className="bg-white px-3 py-1 border-2 border-black flex items-center gap-1">
+                          <Icon icon={iconSet} className="w-4 h-4" />
+                          {skill}
+                        </span>
+                      )
+                      
+                  })}
+                </div>              
+            </motion.div>           
             ))}
           </div>
 
-          {/* Experience Timeline and Availability */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
               initial={{ x: -100, opacity: 0 }}
@@ -157,7 +190,6 @@ export const ExperienceSection = () => {
             </motion.div>
           </div>
 
-          {/* Additional Section - Certifications */}
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
