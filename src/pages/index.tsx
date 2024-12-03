@@ -25,7 +25,7 @@ export default function Home() {
         <meta property="og:url" content="https://ilham.live" />
         <link rel="canonical" href="https://ilham.live" />
       </Head>
-      <div className={`${dmsans.variable} min-h-screen bg-[#f5f5f5]`}>
+      <div className={`${dmsans.className} min-h-screen bg-[#f5f5f5]`}>
         <HeroSection />
         <AboutSection />
         <NavigationSection />
