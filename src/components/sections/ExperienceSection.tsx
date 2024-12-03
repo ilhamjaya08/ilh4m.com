@@ -34,9 +34,9 @@ export const ExperienceSection = () => {
               transition={{ duration: 0.5 }}
               className="bg-[#74FFED] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
-              <h3 className="text-xl font-bold mb-3">Frontend</h3>
+              <h3 className="text-xl font-bold mb-3">Web Development</h3>
               <div className="flex flex-wrap gap-2">
-                {['React', 'Next.js', 'TailwindCSS', 'TypeScript'].map((tech) => (
+                {['HTML', 'CSS', 'React', 'Next.js', 'TailwindCSS', 'Svelte', 'Astro'].map((tech) => (
                   <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
                 ))}
               </div>
@@ -51,7 +51,7 @@ export const ExperienceSection = () => {
             >
               <h3 className="text-xl font-bold mb-3">Backend</h3>
               <div className="flex flex-wrap gap-2">
-                {['Node.js', 'Express', 'MongoDB', 'PostgreSQL'].map((tech) => (
+                {['Node.js', 'Express', 'Bun', 'Hono', 'NestJs', 'Laravel', 'GraphQL'].map((tech) => (
                   <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
                 ))}
               </div>
@@ -66,7 +66,52 @@ export const ExperienceSection = () => {
             >
               <h3 className="text-xl font-bold mb-3">Languages</h3>
               <div className="flex flex-wrap gap-2">
-                {['JavaScript', 'TypeScript', 'Python', 'PHP'].map((tech) => (
+                {['JavaScript', 'TypeScript', 'Java', 'PHP'].map((tech) => (
+                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-[#FFD874] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            >
+              <h3 className="text-xl font-bold mb-3">Infrastructure & Devops</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Git', 'Docker', 'Github Actions', 'Vercel', 'Linux', 'cPanel'].map((tech) => (
+                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-[#FFD874] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            >
+              <h3 className="text-xl font-bold mb-3">Toolstack</h3>
+              <div className="flex flex-wrap gap-2">
+                {['VSCode', 'Laragon', 'Github', 'Postman', 'Android Studio'].map((tech) => (
+                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-[#FFD874] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            >
+              <h3 className="text-xl font-bold mb-3">Databases & ORM</h3>
+              <div className="flex flex-wrap gap-2">
+                {['MySQL', 'MongoDB', 'Prisma', 'TypeOrm', 'PostgreSQL', 'Supabase'].map((tech) => (
                   <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
                 ))}
               </div>
