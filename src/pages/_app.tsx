@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { DM_Sans } from 'next/font/google';
-import { Head } from "next/document";
+import Head from "next/head";  // Changed this line
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
