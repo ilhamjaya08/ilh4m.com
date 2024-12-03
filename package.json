@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hono/node-server": "^1.13.7",
     "@iconify/react": "^5.0.2",
     "@lottiefiles/lottie-player": "^2.0.12",
     "@lottiefiles/react-lottie-player": "^3.5.4",
+    "axios": "^1.7.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.12.0",
+    "hono": "^4.6.12",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.462.0",
     "next": "15.0.3",
