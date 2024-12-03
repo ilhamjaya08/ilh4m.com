@@ -1,6 +1,46 @@
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 
 export const ExperienceSection = () => {
+  const techStacks = [
+    {
+      title: "Web Development",
+      bgColor: "bg-[#74FFED]",
+      icon: "mdi:web",
+      skills: ['HTML', 'CSS', 'React', 'Next.js', 'TailwindCSS', 'Svelte', 'Astro']
+    },
+    {
+      title: "Backend",
+      bgColor: "bg-[#FFB4E6]",
+      icon: "mdi:server",
+      skills: ['Node.js', 'Express', 'Bun', 'Hono', 'NestJs', 'Laravel', 'GraphQL']
+    },
+    {
+      title: "Languages",
+      bgColor: "bg-[#FFD874]",
+      icon: "mdi:code-braces",
+      skills: ['JavaScript', 'TypeScript', 'Java', 'PHP']
+    },
+    {
+      title: "Infrastructure & Devops",
+      bgColor: "bg-[#FFD874]",
+      icon: "mdi:cloud",
+      skills: ['Git', 'Docker', 'Github Actions', 'Vercel', 'Linux', 'cPanel']
+    },
+    {
+      title: "Toolstack",
+      bgColor: "bg-[#FFD874]",
+      icon: "mdi:tools",
+      skills: ['VSCode', 'Laragon', 'Github', 'Postman', 'Android Studio']
+    },
+    {
+      title: "Databases & ORM",
+      bgColor: "bg-[#FFD874]",
+      icon: "mdi:database",
+      skills: ['MySQL', 'MongoDB', 'Prisma', 'TypeOrm', 'PostgreSQL', 'Supabase']
+    }
+  ];
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -27,95 +67,29 @@ export const ExperienceSection = () => {
 
           {/* Tech Stack Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-              className="bg-[#74FFED] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            >
-              <h3 className="text-xl font-bold mb-3">Web Development</h3>
-              <div className="flex flex-wrap gap-2">
-                {['HTML', 'CSS', 'React', 'Next.js', 'TailwindCSS', 'Svelte', 'Astro'].map((tech) => (
-                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ y: -50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-[#FFB4E6] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            >
-              <h3 className="text-xl font-bold mb-3">Backend</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Node.js', 'Express', 'Bun', 'Hono', 'NestJs', 'Laravel', 'GraphQL'].map((tech) => (
-                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-[#FFD874] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            >
-              <h3 className="text-xl font-bold mb-3">Languages</h3>
-              <div className="flex flex-wrap gap-2">
-                {['JavaScript', 'TypeScript', 'Java', 'PHP'].map((tech) => (
-                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-[#FFD874] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            >
-              <h3 className="text-xl font-bold mb-3">Infrastructure & Devops</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Git', 'Docker', 'Github Actions', 'Vercel', 'Linux', 'cPanel'].map((tech) => (
-                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-[#FFD874] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            >
-              <h3 className="text-xl font-bold mb-3">Toolstack</h3>
-              <div className="flex flex-wrap gap-2">
-                {['VSCode', 'Laragon', 'Github', 'Postman', 'Android Studio'].map((tech) => (
-                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-[#FFD874] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            >
-              <h3 className="text-xl font-bold mb-3">Databases & ORM</h3>
-              <div className="flex flex-wrap gap-2">
-                {['MySQL', 'MongoDB', 'Prisma', 'TypeOrm', 'PostgreSQL', 'Supabase'].map((tech) => (
-                  <span key={tech} className="bg-white px-3 py-1 border-2 border-black">{tech}</span>
-                ))}
-              </div>
-            </motion.div>
+            {techStacks.map((stack, index) => (
+              <motion.div
+                key={index}
+                initial={{ x: index % 3 === 0 ? -50 : index % 3 === 1 ? 0 : 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`${stack.bgColor} p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <Icon icon={stack.icon} className="w-5 h-5" />
+                  <h3 className="text-xl font-bold">{stack.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {stack.skills.map((skill) => (
+                    <span key={skill} className="bg-white px-3 py-1 border-2 border-black flex items-center gap-1">
+                      <Icon icon={`simple-icons:${skill.toLowerCase().replace('.', 'dot')}`} className="w-4 h-4" />
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           {/* Experience Timeline and Availability */}
