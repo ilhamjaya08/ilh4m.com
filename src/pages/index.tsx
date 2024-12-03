@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { NavigationSection } from "@/components/sections/NavigationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import Head from "next/head";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
 
 const dmsans = DM_Sans({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function Home() {
       <div className={`${dmsans.className} min-h-screen bg-[#f5f5f5]`}>
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <NavigationSection />
         <ContactSection />
       </div>
