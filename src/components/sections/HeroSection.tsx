@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
+import codingAnim from "../../../public/coding.json";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export const HeroSection = () => {
   return (
@@ -25,13 +29,7 @@ export const HeroSection = () => {
           }}
           className="flex items-center justify-center"
         >
-          <Image
-            src="/developer.svg"
-            alt="Hero Illustration"
-            width={350}
-            height={350}
-            priority
-          />
+          <Lottie animationData={codingAnim} loop={true} />
         </motion.div>        <motion.div
           initial={{ x: 100 }}
           animate={{ x: 0 }}
