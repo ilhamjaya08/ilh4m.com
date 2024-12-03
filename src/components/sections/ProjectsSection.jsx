@@ -156,14 +156,14 @@ export const ProjectsSection = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-2">
                     <a 
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-black text-white px-4 py-2 hover:bg-gray-800 transition-colors"
+                      className="flex items-center gap-1 bg-black text-white px-3 py-1.5 text-sm hover:bg-gray-800 transition-colors"
                     >
-                      <Icon icon="mdi:github" />
+                      <Icon icon="mdi:github" className="w-4 h-4" />
                       GitHub
                     </a>
                     {project.liveUrl && (
@@ -171,9 +171,9 @@ export const ProjectsSection = () => {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-[#4CAF50] text-white px-4 py-2 hover:bg-[#45a049] transition-colors"
+                        className="flex items-center gap-1 bg-[#4CAF50] text-white px-3 py-1.5 text-sm hover:bg-[#45a049] transition-colors"
                       >
-                        <Icon icon="mdi:web" />
+                        <Icon icon="mdi:web" className="w-4 h-4" />
                         Live Demo
                       </a>
                     )}
