@@ -73,6 +73,7 @@ export const NavigationSection = () => {
         </div>
 
         <div className="relative w-full lg:w-1/2 px-4">
+          <div className="text-center mb-4 font-bold text-xl">Click here to interact with me!</div>
           <div className="bg-white p-8 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
             <div className="absolute -top-3 -left-3 w-6 h-6 bg-[#FFD700] rounded-full border-2 border-black"></div>
             <div className="absolute -top-3 -right-3 w-6 h-6 bg-[#FF69B4] rounded-full border-2 border-black"></div>
@@ -99,8 +100,7 @@ export const NavigationSection = () => {
               ))}
             </div>
           </div>
-        </div>    
-      </motion.section>
+        </div>          </motion.section>
 
       <AnimatePresence>
         <PlayWithMeModal 
