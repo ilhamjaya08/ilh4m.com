@@ -183,7 +183,7 @@ export const ProjectsSection = () => {
             ))}
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center items-center gap-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -194,6 +194,9 @@ export const ProjectsSection = () => {
             >
               <Icon icon="mdi:chevron-left" className="w-8 h-8" />
             </motion.button>
+            <div className="text-lg font-medium">
+              Showing {currentPage * 4 + 1}-{Math.min((currentPage + 1) * 4, projects.length)} of {projects.length}
+            </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -204,8 +207,7 @@ export const ProjectsSection = () => {
             >
               <Icon icon="mdi:chevron-right" className="w-8 h-8" />
             </motion.button>
-          </div>
-        </motion.div>
+          </div>        </motion.div>
       </div>
     </motion.section>
   );
