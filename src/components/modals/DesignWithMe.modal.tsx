@@ -44,7 +44,7 @@ export const DesignWithMeModal = ({ isOpen, onClose }: DesignWithMeModalProps) =
     >
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-2xl mx-4 bg-[#FFF0F5] p-8 rounded-lg border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+        className="relative w-full max-w-2xl mx-4 bg-[#FFF0F5] p-8 rounded-lg border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] max-h-[90vh] overflow-y-auto"
       >
         <div className="absolute -top-4 -left-4 w-8 h-8 bg-[#FF69B4] rounded-full border-2 border-black"></div>
         <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#9370DB] rounded-full border-2 border-black"></div>
