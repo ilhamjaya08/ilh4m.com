@@ -2,17 +2,12 @@ import { FC, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface NavItem {
-  label: string;
-  href: string;
-}
-
-const navItems: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-];
+const navItems = {
+  home: { label: 'Home', href: '/' },
+  projects: { label: 'Projects', href: '/projects' },
+  about: { label: 'About', href: '/about' },
+  contact: { label: 'Contact', href: '/contact' },
+};
 
 const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +40,7 @@ const Header: FC = () => {
             <div className="w-6 h-0.5 bg-black"></div>
           </motion.button>
           <ul className="hidden md:flex gap-6">
-            {navItems.map((item) => (
+            {Object.values(navItems).map((item) => (
               <motion.li key={item.href} whileHover={{ scale: 1.05 }}>
                 <Link
                   href={item.href}
@@ -96,7 +91,7 @@ const Header: FC = () => {
                 transition={{ delay: 0.1, staggerChildren: 0.1 }}
                 className="flex flex-col gap-6"
               >
-                {navItems.map((item) => (
+                {Object.values(navItems).map((item) => (
                   <motion.li 
                     key={item.href}
                     whileHover={{ scale: 1.02 }}
