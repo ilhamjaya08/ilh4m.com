@@ -189,12 +189,12 @@ export const ProjectsSection = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
               disabled={currentPage === 0}
-              className={`px-8 py-4 text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
+              className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
                 ${currentPage === 0 ? 'bg-gray-200 cursor-not-allowed' : 'bg-[#FFB6C1] hover:bg-[#FF69B4]'}`}
             >
-              <Icon icon="mdi:chevron-left" className="w-8 h-8" />
+              <Icon icon="mdi:chevron-left" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
             </motion.button>
-            <div className="text-lg font-medium">
+            <div className="text-sm sm:text-base md:text-lg font-medium">
               Showing {currentPage * 4 + 1}-{Math.min((currentPage + 1) * 4, projects.length)} of {projects.length}
             </div>
             <motion.button
@@ -202,12 +202,11 @@ export const ProjectsSection = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentPage(prev => Math.min(totalPages - 1, prev + 1))}
               disabled={currentPage === totalPages - 1}
-              className={`px-8 py-4 text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+              className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
                 ${currentPage === totalPages - 1 ? 'bg-gray-200 cursor-not-allowed' : 'bg-[#FFB6C1] hover:bg-[#FF69B4]'}`}
             >
-              <Icon icon="mdi:chevron-right" className="w-8 h-8" />
-            </motion.button>
-          </div>        </motion.div>
+              <Icon icon="mdi:chevron-right" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            </motion.button>          </div>        </motion.div>
       </div>
     </motion.section>
   );
