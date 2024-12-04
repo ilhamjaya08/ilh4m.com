@@ -27,7 +27,7 @@ export const HeroSection = () => {
               ease: "easeInOut"
             }
           }}
-          className="flex items-center justify-center"
+          className="flex items-center justify-center mt-6"
         >
           <Lottie animationData={codingAnim} loop={true} />
         </motion.div>        <motion.div
@@ -35,8 +35,8 @@ export const HeroSection = () => {
           animate={{ x: 0 }}
           className="flex flex-col justify-center items-center text-center"
         >
-          <h1 className="text-6xl font-bold mb-2">Muhammad Ilham Jaya</h1>
-          <div className="text-3xl">
+          <h1 className="text-4xl md:text-6xl font-bold mb-2">Muhammad Ilham Jaya</h1>
+          <div className="text-xl md:text-3xl">
             I'm a{" "}
             <TypeAnimation
               sequence={[
@@ -54,7 +54,7 @@ export const HeroSection = () => {
               className="font-semibold"
             />
           </div>
-          <p className="text-xl mt-4">Passionate developer crafting innovative solutions with clean and efficient code</p>
+          <p className="text-lg md:text-xl mt-4">Passionate developer crafting innovative solutions with clean and efficient code</p>
         </motion.div>
       </div>
     </motion.section>
