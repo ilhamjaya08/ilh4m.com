@@ -27,14 +27,14 @@ export const AboutSection = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="min-h-screen flex items-center px-8 bg-[#E5FFE5]"
+      className="min-h-screen flex items-center justify-center py-20 px-8 bg-[#E5FFE5]"
     >
       <div className="container mx-auto">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto p-8 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+          className="max-w-4xl mx-auto my-12 p-8 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
         >
           <motion.h2 
             initial={{ x: -20 }}
