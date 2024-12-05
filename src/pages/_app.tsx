@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <meta property="og:image" content="https://ilham.live/og.png" />
       <link rel="canonical" href="https://ilham.live" />
     </Head>
-    <main className={dmSans.className}>
+    <main className={dmSans.className + " text-black dark:text-black"}>
       <Header />
       <Cursor />
       <Component {...pageProps} />
