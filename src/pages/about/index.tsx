@@ -90,17 +90,17 @@ const AboutPage = () => {
         >
           <h2 className="text-3xl font-bold mb-6 text-center">Where I Live</h2>
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-2/3">
               <img 
-                src="/images/jakarta-city.jpg" 
-                alt="Jakarta City" 
-                className="rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                src="https://i.ibb.co.com/ysVJmFr/niels-baars-Qn-Jjj-QSUHk-U-unsplash.jpg"
+                alt="Karanganyar City"
+                className="w-full h-auto rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
               />
             </div>
             <div className="w-full md:w-1/2">
               <p className="text-lg text-gray-700 mb-4">
-                I'm based in Jakarta, Indonesia - a vibrant metropolis known for its dynamic tech scene and rapid development. 
-                Living in the heart of Southeast Asia's largest city provides me with endless opportunities to connect with 
+                I'm based in Karanganyar, Central Java, Indonesia - a vibrant metropolis known for its dynamic tech scene and rapid development. 
+                Living in the heart living here provides me with endless opportunities to connect with 
                 fellow developers and stay at the forefront of technological innovation.
               </p>
               <p className="text-lg text-gray-700">
@@ -108,8 +108,7 @@ const AboutPage = () => {
                 career and keeping me motivated to create impactful solutions through technology.
               </p>
             </div>
-          </div>
-        </motion.div>
+          </div>        </motion.div>
 
         <motion.div
           initial={{ y: 20, opacity: 0 }}
