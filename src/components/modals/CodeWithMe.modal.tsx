@@ -12,9 +12,9 @@
     const [selectedCategory, setSelectedCategory] = useState<string>('');
 
     const socialLinks = [
-      { name: 'GitHub', url: 'https://github.com/yourusername', icon: 'mdi:github' },
-      { name: 'CodePen', url: 'https://codepen.io/yourusername', icon: 'mdi:codepen' },
-      { name: 'StackBlitz', url: 'https://stackblitz.com/@yourusername', icon: 'simple-icons:stackblitz' },
+      { name: 'GitHub', url: 'https://github.com/ilhamjaya08', icon: 'mdi:github' },
+      { name: 'CodePen', url: 'https://codepen.io/ilhamjaya08', icon: 'mdi:codepen' },
+      { name: 'StackBlitz', url: 'https://stackblitz.com/@ilhamjaya08', icon: 'simple-icons:stackblitz' },
     ];
 
     const projectTypes = [

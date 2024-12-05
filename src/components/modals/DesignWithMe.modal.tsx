@@ -12,10 +12,10 @@ export const DesignWithMeModal = ({ isOpen, onClose }: DesignWithMeModalProps) =
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
   const socialLinks = [
-    { name: 'Figma', url: 'https://figma.com/@yourusername', icon: 'logos:figma' },
-    { name: 'Dribbble', url: 'https://dribbble.com/yourusername', icon: 'logos:dribbble-icon' },
-    { name: 'LottieFiles', url: 'https://lottiefiles.com/yourusername', icon: 'uil:lottiefiles' },
-    { name: 'Behance', url: 'https://behance.net/yourusername', icon: 'cib:behance' },
+    { name: 'Figma', url: 'https://figma.com/@ilhamjaya08', icon: 'logos:figma' },
+    { name: 'Dribbble', url: 'https://dribbble.com/ilhamjaya08', icon: 'logos:dribbble-icon' },
+    { name: 'LottieFiles', url: 'https://lottiefiles.com/ilhamjaya08', icon: 'uil:lottiefiles' },
+    { name: 'Behance', url: 'https://www.behance.net/muhammailhamj', icon: 'cib:behance' },
   ];
 
   const projectTypes = [
