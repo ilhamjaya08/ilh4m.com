@@ -8,10 +8,10 @@ interface PlayWithMeModalProps {
 
 export const PlayWithMeModal = ({ isOpen, onClose }: PlayWithMeModalProps) => {
   const games = [
-    { name: 'Valorant', id: 'RiotID: YourName#TAG' },
-    { name: 'Mobile Legends', id: 'MLID: 123456789' },
-    { name: 'Genshin Impact', id: 'UID: 800123456' },
-    { name: 'PUBG Mobile', id: 'PUBGID: YourName' },
+    { name: 'FreeFire', id: 'ID: 1583297502' },
+    { name: 'Mobile Legends', id: 'MLID: Lupajir' },
+    { name: 'Genshin Impact', id: 'UID: lupajuga' },
+    { name: 'PUBG Mobile', id: 'PUBGID: lupajuvga' },
   ];
 
   if (!isOpen) return null;
