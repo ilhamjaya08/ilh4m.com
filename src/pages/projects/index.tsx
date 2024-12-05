@@ -17,7 +17,7 @@ const projects = [
     tech: ["React", "Next.js", "Stripe", "TailwindCSS"],
     githubUrl: "https://github.com/username/project",
     liveUrl: "https://project-demo.com",
-    type: "Web Application",
+    category: "Web",
     year: 2023
   },
   {
@@ -27,30 +27,30 @@ const projects = [
     tech: ["Python", "FastAPI", "OpenAI", "React"],
     githubUrl: "https://github.com/username/project11",
     liveUrl: "https://project11-demo.com",
-    type: "AI Application",
+    category: "AI",
     year: 2023
   },
   {
-    title: "Blockchain Wallet",
+    title: "Mobile Wallet App",
     image: "https://picsum.photos/400/311",
-    description: "Cryptocurrency wallet with multiple chain support",
-    tech: ["Solidity", "Web3.js", "React", "Ethereum"],
+    description: "Digital wallet mobile application",
+    tech: ["React Native", "Firebase", "Redux"],
     githubUrl: "https://github.com/username/project12",
-    type: "Blockchain",
+    category: "Mobile",
     year: 2022
   }
 ];
 
 export default function Projects() {
-  const [filter, setFilter] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("newest");
 
-  const types = ["All", ...new Set(projects.map(project => project.type))];
+  const categories = ["All", "Web", "Mobile", "AI", "Other"];
 
   const filteredProjects = projects
     .filter(project => 
-      (filter === "All" || project.type === filter) &&
+      (activeCategory === "All" || project.category === activeCategory) &&
       (project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
        project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
        project.tech.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase())))
@@ -85,7 +85,7 @@ export default function Projects() {
               Project Gallery
             </motion.h1>
 
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
+            <div className="flex flex-col gap-4 mb-8">
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -102,17 +102,24 @@ export default function Projects() {
               <motion.div 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className="flex gap-4"
+                className="flex flex-wrap gap-2"
               >
-                <select
-                  onChange={(e) => setFilter(e.target.value)}
-                  className="p-3 border-4 border-black bg-white"
-                >
-                  {types.map(type => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    className={`px-6 py-2 border-4 border-black transition-colors ${
+                      activeCategory === category
+                        ? "bg-black text-white"
+                        : "bg-white hover:bg-gray-100"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </motion.div>
 
+              <motion.div className="flex justify-end">
                 <select
                   onChange={(e) => setSortBy(e.target.value)}
                   className="p-3 border-4 border-black bg-white"
@@ -123,65 +130,79 @@ export default function Projects() {
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.map((project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
-                  className="bg-[#FFE4E1] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-                >
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover border-b-4 border-black"
-                  />
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold">{project.title}</h3>
-                      <span className="text-sm bg-black text-white px-2 py-1">
-                        {project.year}
-                      </span>
-                    </div>
-                    <p className="text-gray-700 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex}
-                          className="bg-white px-3 py-1 text-sm border-2 border-black"
-                        >
-                          {tech}
+            {filteredProjects.length === 0 ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-20"
+              >
+                <h3 className="text-2xl font-bold mb-2">Oops. 404 Not Found.</h3>
+                <p className="text-gray-600">There are no projects here</p>
+              </motion.div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ y: -5 }}
+                    className="bg-[#FFE4E1] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                  >
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-48 object-cover border-b-4 border-black"
+                    />
+                    <div className="p-6">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold">{project.title}</h3>
+                        <span className="text-sm bg-black text-white px-2 py-1">
+                          {project.year}
                         </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-2">
-                      <a 
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 bg-black text-white px-3 py-1.5 text-sm hover:bg-gray-800 transition-colors"
-                      >
-                        <Icon icon="mdi:github" className="w-4 h-4" />
-                        GitHub
-                      </a>
-                      {project.liveUrl && (
+                      </div>
+                      <span className="inline-block mb-2 text-sm bg-gray-200 px-2 py-1 border-2 border-black">
+                        {project.category}
+                      </span>
+                      <p className="text-gray-700 mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tech.map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="bg-white px-3 py-1 text-sm border-2 border-black"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex gap-2">
                         <a 
-                          href={project.liveUrl}
+                          href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1 bg-[#4CAF50] text-white px-3 py-1.5 text-sm hover:bg-[#45a049] transition-colors"
+                          className="flex items-center gap-1 bg-black text-white px-3 py-1.5 text-sm hover:bg-gray-800 transition-colors"
                         >
-                          <Icon icon="mdi:web" className="w-4 h-4" />
-                          Live Demo
+                          <Icon icon="mdi:github" className="w-4 h-4" />
+                          GitHub
                         </a>
-                      )}
+                        {project.liveUrl && (
+                          <a 
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 bg-[#4CAF50] text-white px-3 py-1.5 text-sm hover:bg-[#45a049] transition-colors"
+                          >
+                            <Icon icon="mdi:web" className="w-4 h-4" />
+                            Live Demo
+                          </a>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </motion.div>
         </motion.div>
       </div>
