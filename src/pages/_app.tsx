@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { DM_Sans } from 'next/font/google';
 import Head from "next/head";  // Changed this line
 import Cursor from "@/components/Cursor";
+import { Analytics } from "@vercel/analytics/react"
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
     </Head>
     <main className={dmSans.className + " text-black dark:text-black"}>
       <Header />
+      <Analytics />
       <Cursor />
       <Component {...pageProps} />
       <Footer />
