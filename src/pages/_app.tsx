@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { DM_Sans } from 'next/font/google';
 import Head from "next/head";  // Changed this line
+import Cursor from "@/components/Cursor";
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
     </Head>
     <main className={dmSans.className}>
       <Header />
+      <Cursor />
       <Component {...pageProps} />
       <Footer />
     </main>
