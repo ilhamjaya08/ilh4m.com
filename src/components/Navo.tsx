@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 export const Navo = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(768);
-  const [showTooltip, setShowTooltip] = useState(true);
   const menuItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -39,21 +38,6 @@ export const Navo = () => {
   return (
     <>
       <div className="fixed top-6 right-6 flex flex-col items-end gap-2 z-50">
-        {showTooltip && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white p-3 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] max-w-[200px] relative"
-          >
-            <button
-              onClick={() => setShowTooltip(false)}
-              className="absolute -top-2 -right-2 bg-white w-6 h-6 rounded-full border-2 border-black flex items-center justify-center"
-            >
-              <Icon icon="maki:cross" className="w-4 h-4" />
-            </button>
-            <p className="text-sm">Navo: our navigation assistant to guide your visit here</p>
-          </motion.div>
-        )}
         <motion.button
           className="w-14 h-14 bg-white rounded-full border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
@@ -64,7 +48,7 @@ export const Navo = () => {
           {isOpen ? (
             <Icon icon="maki:cross" className="w-8 h-8" />
           ) : (
-            <Icon icon="noto:robot" className="w-8 h-8" />
+            <Icon icon="famicons:menu-sharp" className="w-8 h-8" />
           )}
         </motion.button>
       </div>
