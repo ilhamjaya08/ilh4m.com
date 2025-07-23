@@ -76,7 +76,7 @@ export const AboutSection = () => {
                 <motion.p whileHover={{ x: 10, transition: { duration: 0.2 } }}>🎮 Hobbies: Gaming, Coding, Reading</motion.p>
               </motion.div>
             </motion.div>
-            <motion.div 
+            {/* <motion.div 
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
@@ -96,7 +96,7 @@ export const AboutSection = () => {
                 <p className="text-sm text-right mt-4 font-bold">{quote.a}</p>
                 </>
               )}
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>
