@@ -196,29 +196,71 @@ export const ExperienceSection = () => {
             transition={{ duration: 0.5 }}
             className="mt-12 bg-[#FFB6C1] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           >
-            <h3 className="text-2xl font-bold mb-4">Certifications</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                {
-                  name: "Web Development Bootcamp",
-                  issuer: "Udemy",
-                  date: "2023"
-                },
-                {
-                  name: "React Advanced Patterns",
-                  issuer: "Frontend Masters",
-                  date: "2023"
-                }
-              ].map((cert, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white p-4 border-2 border-black"
-                >
-                  <h4 className="font-bold">{cert.name}</h4>
-                  <p className="text-sm">{cert.issuer} - {cert.date}</p>
-                </motion.div>
-              ))}
+            <h3 className="text-2xl font-bold mb-4">Certifications & Awards</h3>
+            <div className="space-y-6">
+              {(() => {
+                const achievements = [
+                  {
+                    name: "1st Place in LKS SMK Web Technologies - Surakarta",
+                    issuer: "Competition Committee",
+                    date: "2025",
+                    type: "competitions"
+                  },
+                  {
+                    name: "Dart Programming - Beginner",
+                    issuer: "Dicoding Indonesia",
+                    date: "2024",
+                    type: "certifications"
+                  },
+                  {
+                    name: "Flutter Programming - Beginner",
+                    issuer: "Dicoding Indonesia",
+                    date: "2024",
+                    type: "certifications"
+                  },
+                ];
+
+                const groupedAchievements = achievements.reduce((acc, item) => {
+                  if (!acc[item.type]) acc[item.type] = [];
+                  acc[item.type].push(item);
+                  return acc;
+                }, {} as Record<string, typeof achievements>);
+
+                const typeOrder = ['competitions', 'awards', 'certifications'] as const;
+                const typeLabels: Record<string, string> = {
+                  competitions: 'Competitions',
+                  awards: 'Awards', 
+                  certifications: 'Certifications'
+                };
+                const typeColors: Record<string, string> = {
+                  competitions: 'bg-neoYellow-200',
+                  awards: 'bg-neoBlue-200',
+                  certifications: 'bg-white'
+                };
+
+                return typeOrder.map(type => {
+                  if (!groupedAchievements[type]) return null;
+                  return (
+                    <div key={type}>
+                      <div className={`inline-block px-3 py-1 mb-3 text-sm font-bold border-2 border-black ${typeColors[type]}`}>
+                        {typeLabels[type]}
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {groupedAchievements[type].map((item, index) => (
+                          <motion.div
+                            key={index}
+                            whileHover={{ scale: 1.02 }}
+                            className={`p-4 border-2 border-black ${typeColors[type]}`}
+                          >
+                            <h4 className="font-bold">{item.name}</h4>
+                            <p className="text-sm">{item.issuer} - {item.date}</p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }).filter(Boolean);
+              })()}
             </div>
           </motion.div>
         </motion.div>
