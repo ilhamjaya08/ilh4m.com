@@ -9,8 +9,8 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Particles } from "react-particles";
-import { loadFull } from "tsparticles";
-import type { Container, Engine } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
+import type { Engine } from "tsparticles-engine";
 
 const dmsans = DM_Sans({
   subsets: ['latin'],
@@ -116,10 +116,10 @@ const particlesConfig = {
     move: {
       enable: true,
       speed: 6,
-      direction: "none",
+      direction: "none", // Use the string literal type "none" to match the enum
       random: false,
       straight: false,
-      outMode: "out",
+      outModes: { default: "out" },
     }
   }
 };
@@ -129,9 +129,9 @@ export default function Home() {
   const [init, setInit] = useState(false);
 
   const particlesInit = async (engine: Engine) => {
-    await loadFull(engine);
-    setInit(true);
-  };
+      await loadSlim(engine);
+      setInit(true);
+    };
 
   return (
     <>
@@ -155,7 +155,6 @@ export default function Home() {
               <Particles
                 id="tsparticles"
                 init={particlesInit}
-                options={particlesConfig}
                 className="fixed inset-0 z-50"
               />
             )}

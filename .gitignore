@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+#coding
+AGENT.md
+
 # testing
 /coverage
 
