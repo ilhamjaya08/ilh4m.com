@@ -136,7 +136,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ilham.live - Software Developer</title>
+        <title>Ilh4m - Software Engineer</title>
         <meta name="description" content="Welcome to my personal portfolio website. I am a professional developer showcasing my work and experience." />
         <meta name="keywords" content="portfolio, developer, web development, projects" />
         <meta name="author" content="You" />
@@ -144,8 +144,8 @@ export default function Home() {
         <meta property="og:title" content="My Portfolio - Welcome to My Personal Website" />
         <meta property="og:description" content="Welcome to my personal portfolio website. I am a professional developer showcasing my work and experience." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ilham.live" />
-        <link rel="canonical" href="https://ilham.live" />
+        <meta property="og:url" content="https://ilh4m.com" />
+        <link rel="canonical" href="https://ilh4m.com" />
       </Head>
       <AnimatePresence>
         {loading && (

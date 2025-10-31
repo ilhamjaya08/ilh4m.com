@@ -21,12 +21,12 @@ export default function App({ Component, pageProps }: AppProps) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Muhammad Ilham Jaya's portfolio website. I am a passionate software developer with expertise in web development, creating innovative solutions and delivering high-quality applications." />
       <meta name="keywords" content="ilham, ilhamjaya08, portfolio, nextjs, seo, dev, developer, programmer, tailwind, muhammad ilham jaya" />
-      <meta property="og:title" content="Ilham.live" />
+      <meta property="og:title" content="Ilh4m - Software Engineer" />
       <meta property="og:description" content="Muhammad Ilham Jaya's portfolio website. I am a passionate software developer with expertise in web development, creating innovative solutions and delivering high-quality applications." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://ilham.live" />
-      <meta property="og:image" content="https://ilham.live/og.png" />
-      <link rel="canonical" href="https://ilham.live" />
+      <meta property="og:url" content="https://ilh4m.com" />
+      <meta property="og:image" content="https://ilh4m.com/og.png" />
+      <link rel="canonical" href="https://ilh4m.com" />
     </Head>
     <main className={dmSans.className + " text-black dark:text-black"}>
       <Navo />

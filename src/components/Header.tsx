@@ -26,7 +26,7 @@ const Header: FC = () => {
               href="/" 
               className="text-2xl font-bold hover:text-gray-700 transition-colors"
             >
-              Ilham.live
+              Ilh4m
             </Link>
           </motion.div>
           <motion.button 

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-    siteUrl: process.env.SITE_URL || 'https://ilham.live', 
+    siteUrl: process.env.SITE_URL || 'https://ilh4m.com', 
     generateRobotsTxt: true,
     changefreq: 'daily',
     priority: 0.7,
@@ -18,7 +18,7 @@ const config = {
         },
         ],
         additionalSitemaps: [
-        'https://ilham.live/sitemap-1.xml', 
+        'https://ilh4m.com/sitemap-1.xml', 
         ],
     },
 };
