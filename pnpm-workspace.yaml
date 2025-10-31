@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - '@tsparticles/engine'
+  - react-particles
+  - sharp
+  - tsparticles-engine
