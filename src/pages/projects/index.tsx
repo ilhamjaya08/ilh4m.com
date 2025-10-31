@@ -63,7 +63,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Ilh4m</title>
+        <title>Projects - Muhammad Ilham Jaya</title>
         <meta name="description" content="Browse through my portfolio of projects" />
       </Head>
       <div className={`${dmsans.className} min-h-screen bg-[#ffba79] py-20`}>

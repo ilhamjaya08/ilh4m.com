@@ -136,12 +136,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ilh4m - Software Engineer</title>
+        <title>Muhammad Ilham Jaya - Software Engineer</title>
         <meta name="description" content="Welcome to my personal portfolio website. I am a professional developer showcasing my work and experience." />
         <meta name="keywords" content="portfolio, developer, web development, projects" />
         <meta name="author" content="You" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="My Portfolio - Welcome to My Personal Website" />
+        <meta property="og:title" content="Muhammad Ilham Jaya - Portfolio" />
         <meta property="og:description" content="Welcome to my personal portfolio website. I am a professional developer showcasing my work and experience." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ilh4m.com" />

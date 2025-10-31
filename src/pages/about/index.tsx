@@ -43,7 +43,7 @@ const AboutPage = () => {
   return (
     <>
     <Head>
-      <title>About - Ilh4m</title>
+      <title>About - Muhammad Ilham Jaya</title>
       <meta name="description" content="About me" />
     </Head>
     <motion.div

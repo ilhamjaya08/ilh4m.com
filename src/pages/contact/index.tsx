@@ -90,7 +90,7 @@ const ContactPage = () => {
   return (
     <>
     <Head>
-      <title>Contacts - Ilh4m</title>
+      <title>Contacts - Muhammad Ilham Jaya</title>
       <meta name="description" content="My contacts" />
     </Head>
     <motion.div
