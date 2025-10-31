@@ -1,101 +1,22 @@
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import projectsData from "@/lib/data/projects.json";
+
+interface Project {
+  title: string;
+  image: string;
+  description: string;
+  tech: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  type: string;
+}
 
 export const ProjectsSection = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      image: "https://picsum.photos/400/300",
-      description: "A full-stack e-commerce platform built with Next.js and Stripe integration",
-      tech: ["React", "Next.js", "Stripe", "TailwindCSS"],
-      githubUrl: "https://github.com/username/project",
-      liveUrl: "https://project-demo.com",
-      type: "Web Application"
-    },
-    {
-      title: "Task Management App",
-      image: "https://picsum.photos/400/301",
-      description: "Real-time task management application with team collaboration features",
-      tech: ["React", "Firebase", "Material-UI"],
-      githubUrl: "https://github.com/username/project2",
-      liveUrl: "https://project2-demo.com",
-      type: "Web Application"
-    },
-    {
-      title: "Weather Dashboard",
-      image: "https://picsum.photos/400/302",
-      description: "Weather forecast application with interactive maps",
-      tech: ["React", "OpenWeather API", "Leaflet"],
-      githubUrl: "https://github.com/username/project3",
-      liveUrl: "https://project3-demo.com",
-      type: "Web Application"
-    },
-    {
-      title: "Social Media API",
-      image: "https://picsum.photos/400/303",
-      description: "RESTful API for social media platform",
-      tech: ["Node.js", "Express", "MongoDB"],
-      githubUrl: "https://github.com/username/project4",
-      type: "Backend API"
-    },
-    {
-      title: "Portfolio Website",
-      image: "https://picsum.photos/400/304",
-      description: "Personal portfolio website with blog functionality",
-      tech: ["Next.js", "MDX", "TailwindCSS"],
-      githubUrl: "https://github.com/username/project5",
-      liveUrl: "https://project5-demo.com",
-      type: "Website"
-    },
-    {
-      title: "Chat Application",
-      image: "https://picsum.photos/400/305",
-      description: "Real-time chat application with WebSocket",
-      tech: ["React", "Socket.io", "Express"],
-      githubUrl: "https://github.com/username/project6",
-      liveUrl: "https://project6-demo.com",
-      type: "Web Application"
-    },
-    {
-      title: "Recipe Finder",
-      image: "https://picsum.photos/400/306",
-      description: "Recipe search and save application",
-      tech: ["React", "Spoonacular API", "Redux"],
-      githubUrl: "https://github.com/username/project7",
-      liveUrl: "https://project7-demo.com",
-      type: "Web Application"
-    },
-    {
-      title: "Fitness Tracker",
-      image: "https://picsum.photos/400/307",
-      description: "Workout tracking and progress monitoring app",
-      tech: ["React Native", "Firebase", "Redux"],
-      githubUrl: "https://github.com/username/project8",
-      type: "Mobile App"
-    },
-    {
-      title: "Blog Platform",
-      image: "https://picsum.photos/400/308",
-      description: "Multi-user blog platform with CMS",
-      tech: ["Next.js", "Prisma", "PostgreSQL"],
-      githubUrl: "https://github.com/username/project9",
-      liveUrl: "https://project9-demo.com",
-      type: "Web Application"
-    },
-    {
-      title: "Movie Database",
-      image: "https://picsum.photos/400/309",
-      description: "Movie information and review platform",
-      tech: ["React", "TMDB API", "TailwindCSS"],
-      githubUrl: "https://github.com/username/project10",
-      liveUrl: "https://project10-demo.com",
-      type: "Web Application"
-    }
-  ];
+
+  const projects: Project[] = projectsData;
 
   const projectsPerPage = 4;
   const totalPages = Math.ceil(projects.length / projectsPerPage);
@@ -119,7 +40,7 @@ export const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-7xl mx-auto my-12 p-8 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ x: -20 }}
             whileInView={{ x: 0 }}
             whileHover={{ scale: 1.02 }}
@@ -138,8 +59,8 @@ export const ProjectsSection = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-[#FFE4E1] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
               >
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover border-b-4 border-black"
                 />
@@ -148,7 +69,7 @@ export const ProjectsSection = () => {
                   <p className="text-gray-700 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
-                      <span 
+                      <span
                         key={techIndex}
                         className="bg-white px-3 py-1 text-sm border-2 border-black"
                       >
@@ -157,7 +78,7 @@ export const ProjectsSection = () => {
                     ))}
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    <a 
+                    <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -167,7 +88,7 @@ export const ProjectsSection = () => {
                       GitHub
                     </a>
                     {project.liveUrl && (
-                      <a 
+                      <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -189,7 +110,7 @@ export const ProjectsSection = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
               disabled={currentPage === 0}
-              className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
+              className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
                 ${currentPage === 0 ? 'bg-gray-200 cursor-not-allowed' : 'bg-[#FFB6C1] hover:bg-[#FF69B4]'}`}
             >
               <Icon icon="mdi:chevron-left" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
@@ -206,9 +127,10 @@ export const ProjectsSection = () => {
                 ${currentPage === totalPages - 1 ? 'bg-gray-200 cursor-not-allowed' : 'bg-[#FFB6C1] hover:bg-[#FF69B4]'}`}
             >
               <Icon icon="mdi:chevron-right" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
-            </motion.button>          </div>        </motion.div>
+            </motion.button>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );
 };
-

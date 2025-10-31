@@ -1,0 +1,90 @@
+[
+  {
+    "title": "E-Commerce Platform",
+    "image": "https://picsum.photos/400/300",
+    "description": "A full-stack e-commerce platform built with Next.js and Stripe integration",
+    "tech": ["React", "Next.js", "Stripe", "TailwindCSS"],
+    "githubUrl": "https://github.com/username/project",
+    "liveUrl": "https://project-demo.com",
+    "type": "Web Application"
+  },
+  {
+    "title": "Task Management App",
+    "image": "https://picsum.photos/400/301",
+    "description": "Real-time task management application with team collaboration features",
+    "tech": ["React", "Firebase", "Material-UI"],
+    "githubUrl": "https://github.com/username/project2",
+    "liveUrl": "https://project2-demo.com",
+    "type": "Web Application"
+  },
+  {
+    "title": "Weather Dashboard",
+    "image": "https://picsum.photos/400/302",
+    "description": "Weather forecast application with interactive maps",
+    "tech": ["React", "OpenWeather API", "Leaflet"],
+    "githubUrl": "https://github.com/username/project3",
+    "liveUrl": "https://project3-demo.com",
+    "type": "Web Application"
+  },
+  {
+    "title": "Social Media API",
+    "image": "https://picsum.photos/400/303",
+    "description": "RESTful API for social media platform",
+    "tech": ["Node.js", "Express", "MongoDB"],
+    "githubUrl": "https://github.com/username/project4",
+    "type": "Backend API"
+  },
+  {
+    "title": "Portfolio Website",
+    "image": "https://picsum.photos/400/304",
+    "description": "Personal portfolio website with blog functionality",
+    "tech": ["Next.js", "MDX", "TailwindCSS"],
+    "githubUrl": "https://github.com/username/project5",
+    "liveUrl": "https://project5-demo.com",
+    "type": "Website"
+  },
+  {
+    "title": "Chat Application",
+    "image": "https://picsum.photos/400/305",
+    "description": "Real-time chat application with WebSocket",
+    "tech": ["React", "Socket.io", "Express"],
+    "githubUrl": "https://github.com/username/project6",
+    "liveUrl": "https://project6-demo.com",
+    "type": "Web Application"
+  },
+  {
+    "title": "Recipe Finder",
+    "image": "https://picsum.photos/400/306",
+    "description": "Recipe search and save application",
+    "tech": ["React", "Spoonacular API", "Redux"],
+    "githubUrl": "https://github.com/username/project7",
+    "liveUrl": "https://project7-demo.com",
+    "type": "Web Application"
+  },
+  {
+    "title": "Fitness Tracker",
+    "image": "https://picsum.photos/400/307",
+    "description": "Workout tracking and progress monitoring app",
+    "tech": ["React Native", "Firebase", "Redux"],
+    "githubUrl": "https://github.com/username/project8",
+    "type": "Mobile App"
+  },
+  {
+    "title": "Blog Platform",
+    "image": "https://picsum.photos/400/308",
+    "description": "Multi-user blog platform with CMS",
+    "tech": ["Next.js", "Prisma", "PostgreSQL"],
+    "githubUrl": "https://github.com/username/project9",
+    "liveUrl": "https://project9-demo.com",
+    "type": "Web Application"
+  },
+  {
+    "title": "Movie Database",
+    "image": "https://picsum.photos/400/309",
+    "description": "Movie information and review platform",
+    "tech": ["React", "TMDB API", "TailwindCSS"],
+    "githubUrl": "https://github.com/username/project10",
+    "liveUrl": "https://project10-demo.com",
+    "type": "Web Application"
+  }
+]
