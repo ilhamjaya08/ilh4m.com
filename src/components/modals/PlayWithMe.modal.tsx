@@ -8,10 +8,10 @@ interface PlayWithMeModalProps {
 
 export const PlayWithMeModal = ({ isOpen, onClose }: PlayWithMeModalProps) => {
   const games = [
-    { name: 'FreeFire', id: 'ID: 1583297502' },
-    { name: 'Mobile Legends', id: 'MLID: Lupajir' },
-    { name: 'Genshin Impact', id: 'UID: lupajuga' },
-    { name: 'PUBG Mobile', id: 'PUBGID: lupajuvga' },
+    { name: 'Garena Free Fire', id: 'UID: 1583297502' },
+    { name: 'Mobile Legends', id: 'UID: 779957123 (12111)' },
+    { name: 'Minecraft', id: 'UID: @ilhamjaya08' },
+    { name: 'Roblox', id: 'UID: @ilhamxd111' },
   ];
 
   if (!isOpen) return null;
@@ -56,11 +56,11 @@ export const PlayWithMeModal = ({ isOpen, onClose }: PlayWithMeModalProps) => {
           ))}
         </div>
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <button className="bg-[#4CAF50] text-white px-6 py-3 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all">
             Send Message
           </button>
-        </div>
+        </div> */}
 
         <div className="absolute -z-10 w-32 h-32 top-1/2 -translate-y-1/2 -right-16 opacity-10">
           <Icon icon="game-icons:game-console" className="w-full h-full" />

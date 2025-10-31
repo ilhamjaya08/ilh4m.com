@@ -20,19 +20,19 @@ export const ExperienceSection = () => {
       title: "Languages",
       bgColor: "bg-[#FFD874]",
       icon: "mdi:code-braces",
-      skills: ['JavaScript', 'TypeScript', 'Java', 'PHP']
+      skills: ['JavaScript', 'TypeScript', 'Java', 'PHP', 'Solidity']
     },
     {
-      title: "Infrastructure & Devops",
+      title: "Ecosystem & Devops",
       bgColor: "bg-[#FFD874]",
       icon: "mdi:cloud",
-      skills: ['Git', 'Docker', 'Github Actions', 'Vercel', 'Linux', 'cPanel']
+      skills: ['Git', 'Docker', 'Github Actions', 'Vercel', 'Linux', 'cPanel', 'Ethereum']
     },
     {
       title: "Toolstack",
       bgColor: "bg-[#FFD874]",
       icon: "mdi:tools",
-      skills: ['VSCode', 'Laragon', 'Github', 'Postman', 'Android Studio']
+      skills: ['VSCode', 'Laragon', 'Github', 'Postman', 'Android Studio', 'Hardhat']
     },
     {
       title: "Databases & ORM",
@@ -141,13 +141,7 @@ export const ExperienceSection = () => {
                     date: "2023 - Present",
                     role: "Freelance Developer",
                     company: "Self-employed",
-                    description: "Working on various web development projects for clients."
-                  },
-                  {
-                    date: "2022 - 2023",
-                    role: "Junior Web Developer",
-                    company: "Tech Company",
-                    description: "Developed and maintained web applications using React and Node.js."
+                    description: "Working on various web & apps development projects for clients."
                   }
                 ].map((job, index) => (
                   <motion.div
@@ -183,7 +177,7 @@ export const ExperienceSection = () => {
               </div>
               <p className="text-sm">Open to:</p>
               <ul className="list-disc list-inside text-sm mt-2">
-                <li>Full-time positions</li>
+                <li>Part-time positions</li>
                 <li>Freelance projects</li>
                 <li>Remote work</li>
               </ul>
