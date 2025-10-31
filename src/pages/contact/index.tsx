@@ -5,82 +5,82 @@ const ContactPage = () => {
   const socialCards = [
     {
       platform: 'GitHub',
-      username: '@yourusername',
+      username: '@ilhamjaya08',
       icon: 'mdi:github',
       stats: '50+ repositories',
-      link: 'https://github.com/yourusername',
+      link: 'https://github.com/ilhamjaya08',
       bgColor: '#FFE4E1',
       rotate: -2
     },
     {
       platform: 'Instagram',
-      username: '@yourusername',
+      username: '@ilham.j_08',
       icon: 'mdi:instagram',
       stats: '1.2K followers',
-      link: 'https://instagram.com/yourusername',
+      link: 'https://instagram.com/ilham.j_08',
       bgColor: '#E0FFFF',
       rotate: 1
     },
     {
       platform: 'Facebook',
-      username: 'Your Name',
+      username: 'Muhammad Ilham Jaya',
       icon: 'mdi:facebook',
       stats: '500+ friends',
-      link: 'https://facebook.com/yourusername',
+      link: 'https://facebook.com/ilhamjaya08',
       bgColor: '#F0FFF0',
       rotate: -1
     },
     {
       platform: 'Twitter/X',
-      username: '@yourusername',
+      username: '@ilhamjaya08',
       icon: 'simple-icons:x',
       stats: '800 followers',
-      link: 'https://twitter.com/yourusername',
+      link: 'https://twitter.com/ilhamjaya08',
       bgColor: '#FFF0F5',
       rotate: 2
     },
     {
       platform: 'Threads',
-      username: '@yourusername',
+      username: '@ilham.j_08',
       icon: 'ri:threads-fill',
       stats: '300 followers',
-      link: 'https://threads.net/yourusername',
+      link: 'https://threads.net/ilham.j_08',
       bgColor: '#F0F8FF',
       rotate: -3
     },
     {
       platform: 'Reddit',
-      username: 'u/yourusername',
+      username: 'u/Hamm08_XD',
       icon: 'mdi:reddit',
       stats: '1K karma',
-      link: 'https://reddit.com/user/yourusername',
+      link: 'https://reddit.com/user/Hamm08_XD',
       bgColor: '#FFE4E6',
       rotate: 1.5
     },
     {
       platform: 'Telegram',
-      username: '@yourusername',
+      username: '@ilhamjaya08',
       icon: 'mdi:telegram',
       stats: 'Active',
-      link: 'https://t.me/yourusername',
+      link: 'https://t.me/ilhamjaya08',
       bgColor: '#E6E6FA',
       rotate: -1.5
     },
     {
       platform: 'Discord',
-      username: 'username#0000',
+      username: 'sebutsajailham',
       icon: 'mdi:discord',
-      stats: '5 servers',
-      link: 'https://discord.com/users/yourid',
+      stats: '73 friends',
+      link: 'https://discord.com/users/sebutsajailham',
       bgColor: '#F5F5DC',
       rotate: 2.5
     },
     {
       platform: 'Email',
-      username: 'your@email.com',
+      username: 'm.ilhamjaya1808@gmail.com',
       icon: 'mdi:email',
       stats: 'Business inquiries',
-      link: 'mailto:your@email.com',
+      link: 'mailto:m.ilhamjaya1808@gmail.com',
       bgColor: '#FFDAB9',
       rotate: -2.5
     }
