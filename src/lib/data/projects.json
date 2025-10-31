@@ -36,6 +36,14 @@
     "type": "Web Application"
   },
   {
+    "title": "Whatsbot",
+    "image": "https://i.ibb.co.com/zTSRH8qX/images.png",
+    "description": "Lightweight WhatsApp bot boilerplate support pairing code",
+    "tech": ["Node.js", "baileys"],
+    "githubUrl": "https://github.com/ilhamjaya08/whatsbot",
+    "type": "Bot & Automation"
+  },
+  {
     "title": "Rapidcount",
     "image": "https://i.ibb.co.com/G3xmZT4C/Screenshot-20251031-172628.png",
     "description": "Election vote counting desktop application",
@@ -44,11 +52,44 @@
     "type": "Desktop Application"
   },
   {
-    "title": "Whatsbot",
-    "image": "https://i.ibb.co.com/zTSRH8qX/images.png",
-    "description": "Lightweight WhatsApp bot boilerplate support pairing code",
-    "tech": ["Node.js", "baileys"],
-    "githubUrl": "https://github.com/ilhamjaya08/whatsbot",
+    "title": "Discord Bun Boilerplate",
+    "image": "https://i.ibb.co.com/JW5PnHKs/Screenshot-20251031-210003.png",
+    "description": "Fast Discord bot boilerplate using Bun runtime",
+    "tech": ["Typescript", "Bun", "Discord.js"],
+    "githubUrl": "https://github.com/ilhamjaya08/bun-discord",
     "type": "Bot & Automation"
+  },
+  {
+    "title": "SAMP Query SDK For Typescript",
+    "image": "https://i.ibb.co.com/v63sssf8/Screenshot-20251031-205721.png",
+    "description": "SA:MP Query SDK for Typescript developers to get server info, player info, and rules. samp-query-ts on npm js package",
+    "tech": ["Typescript", "SA:MP", "RakNet"],
+    "githubUrl": "https://github.com/ilhamjaya08/samp-query-ts",
+    "type": "Library"
+  },
+  {
+    "title": "Diversity Roleplay SA:MP Gamemode",
+    "image": "https://i.ibb.co.com/Csty83gv/Nama-RP-GTA-SAMP-1.webp",
+    "description": "Advanced roleplay gamemode for San Andreas Multiplayer (SA:MP) server",
+    "tech": ["Pawn", "SA:MP", "RakNet"],
+    "githubUrl": "https://github.com/ilhamjaya08/diversity-gamemode-rp",
+    "type": "Scripts"
+  },
+  {
+    "title": "Ambascript Programming Language",
+    "image": "https://i.ibb.co.com/cXsCs4Cx/Screenshot-20251031-210755.png",
+    "description": "New jokes-inspired slang programming language for fun. Based on javascript + Node.js. the project is not a joke, its actually a worked programming language",
+    "tech": ["Node.js", "Javascript"],
+    "githubUrl": "https://github.com/ilhamjaya08/ambascript",
+    "type": "Scripts"
+  },
+  {
+    "title": "Luminary Roleplay UCP Web",
+    "image": "https://i.ibb.co.com/Csty83gv/Nama-RP-GTA-SAMP-1.webp",
+    "description": "Discontinued for +2 years & deprecated. User control panel web application for Luminary Roleplay SA:MP server",
+    "tech": ["Next.js", "Mysql", "SA:MP"],
+    "githubUrl": "https://github.com/ilhamjaya08/luminary-ucp-web",
+    "liveUrl": "https://luminary-ucp-web.vercel.app",
+    "type": "Web Application"
   }
 ]
