@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import Head from 'next/head';
 
 const ContactPage = () => {
   const socialCards = [
@@ -87,6 +88,11 @@ const ContactPage = () => {
   ];
 
   return (
+    <>
+    <Head>
+      <title>Contacts - Ilh4m</title>
+      <meta name="description" content="My contacts" />
+    </Head>
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -136,6 +142,7 @@ const ContactPage = () => {
         </motion.div>
       </div>
     </motion.div>
+    </>
   );
 };
 
