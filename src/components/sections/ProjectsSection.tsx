@@ -11,10 +11,12 @@ interface Project {
   githubUrl: string;
   liveUrl?: string;
   type: string;
+  year: number;
 }
 
 export const ProjectsSection = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
 
   const projects: Project[] = projectsData;
 
@@ -24,6 +26,10 @@ export const ProjectsSection = () => {
     currentPage * projectsPerPage,
     (currentPage + 1) * projectsPerPage
   );
+
+  const handleImageLoad = (imageUrl: string) => {
+    setLoadedImages(prev => ({ ...prev, [imageUrl]: true }));
+  };
 
   return (
     <motion.section
@@ -52,21 +58,32 @@ export const ProjectsSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">
             {currentProjects.map((project, index) => (
               <motion.div
-                key={index}
+                key={`${project.githubUrl}-${currentPage}-${index}`}
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-[#FFE4E1] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover border-b-4 border-black"
-                />
+                <div className="relative w-full h-48 border-b-4 border-black">
+                  {!loadedImages[project.image] && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+                      <span className="text-gray-600 font-bold text-lg">Loading...</span>
+                    </div>
+                  )}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    onLoad={() => handleImageLoad(project.image)}
+                    className={`w-full h-48 object-cover ${
+                      loadedImages[project.image] ? 'opacity-100' : 'opacity-0'
+                    } transition-opacity duration-300`}
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-700 mb-4">{project.description}</p>
+                  <p className="text-gray-700 mb-4">Year: {project.year}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
                       <span

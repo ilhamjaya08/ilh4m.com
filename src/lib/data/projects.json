@@ -6,7 +6,8 @@
     "tech": ["Svelte", "Hono.js", "Bun"],
     "githubUrl": "https://github.com/ilhamjaya08/cek-username",
     "liveUrl": "https://cek-username.vercel.app",
-    "type": "Web Application"
+    "type": "Web Application",
+    "year": 2024
   },
   {
     "title": "ilh4m.com",
@@ -15,7 +16,8 @@
     "tech": ["Next.js", "Hono.js", "TailwindCSS", "React"],
     "githubUrl": "https://github.com/ilhamjaya08/ilh4m.com",
     "liveUrl": "https://ilh4m.com",
-    "type": "Web Application"
+    "type": "Web Application",
+    "year": 2025
   },
   {
     "title": "V3rific",
@@ -24,7 +26,8 @@
     "tech": ["Web3", "Next.js", "Hardhat", "Solidity"],
     "githubUrl": "https://github.com/ilhamjaya08/v3rific-core-app",
     "liveUrl": "https://v3rific.vercel.app/",
-    "type": "Web Application"
+    "type": "Web Application",
+    "year": 2025
   },
   {
     "title": "Safepay",
@@ -33,7 +36,8 @@
     "tech": ["React.js", "Laravel", "TailwindCSS", "Breeze"],
     "githubUrl": "https://github.com/ilhamjaya08/safepay",
     "liveUrl": "https://docs.google.com/document/d/1k8uNaGT0n41xe-SlCVIv_NM8WeqJ_DwLHiYs7Qb1Eys/edit?tab=t.0",
-    "type": "Web Application"
+    "type": "Web Application",
+    "year": 2025
   },
   {
     "title": "Whatsbot",
@@ -41,7 +45,8 @@
     "description": "Lightweight WhatsApp bot boilerplate support pairing code",
     "tech": ["Node.js", "baileys"],
     "githubUrl": "https://github.com/ilhamjaya08/whatsbot",
-    "type": "Bot & Automation"
+    "type": "Bot & Automation",
+    "year": 2024
   },
   {
     "title": "Rapidcount",
@@ -49,7 +54,8 @@
     "description": "Election vote counting desktop application",
     "tech": ["Java", "Swing", "Netbeans"],
     "githubUrl": "https://github.com/ilhamjaya08/aplikasi-pencatatan-pemilu",
-    "type": "Desktop Application"
+    "type": "Desktop Application",
+    "year": 2024
   },
   {
     "title": "Discord Bun Boilerplate",
@@ -57,7 +63,8 @@
     "description": "Fast Discord bot boilerplate using Bun runtime",
     "tech": ["Typescript", "Bun", "Discord.js"],
     "githubUrl": "https://github.com/ilhamjaya08/bun-discord",
-    "type": "Bot & Automation"
+    "type": "Bot & Automation",
+    "year": 2024
   },
   {
     "title": "SAMP Query SDK For Typescript",
@@ -65,7 +72,8 @@
     "description": "SA:MP Query SDK for Typescript developers to get server info, player info, and rules. samp-query-ts on npm js package",
     "tech": ["Typescript", "SA:MP", "RakNet"],
     "githubUrl": "https://github.com/ilhamjaya08/samp-query-ts",
-    "type": "Library"
+    "type": "Library",
+    "year": 2024
   },
   {
     "title": "Diversity Roleplay SA:MP Gamemode",
@@ -73,7 +81,8 @@
     "description": "Advanced roleplay gamemode for San Andreas Multiplayer (SA:MP) server",
     "tech": ["Pawn", "SA:MP", "RakNet"],
     "githubUrl": "https://github.com/ilhamjaya08/diversity-gamemode-rp",
-    "type": "Scripts"
+    "type": "Scripts",
+    "year": 2023
   },
   {
     "title": "Ambascript Programming Language",
@@ -81,7 +90,8 @@
     "description": "New jokes-inspired slang programming language for fun. Based on javascript + Node.js. the project is not a joke, its actually a worked programming language",
     "tech": ["Node.js", "Javascript"],
     "githubUrl": "https://github.com/ilhamjaya08/ambascript",
-    "type": "Scripts"
+    "type": "Scripts",
+    "year": 2024
   },
   {
     "title": "Luminary Roleplay UCP Web",
@@ -90,6 +100,7 @@
     "tech": ["Next.js", "Mysql", "SA:MP"],
     "githubUrl": "https://github.com/ilhamjaya08/luminary-ucp-web",
     "liveUrl": "https://luminary-ucp-web.vercel.app",
-    "type": "Web Application"
+    "type": "Web Application",
+    "year": 2023
   }
 ]

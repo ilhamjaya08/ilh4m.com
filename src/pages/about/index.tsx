@@ -14,7 +14,7 @@ const AboutPage = () => {
     {
       title: "Junior High School",
       institution: "SMP Budi Utomo Surakarta",
-      period: "2010 - 2023",
+      period: "2020 - 2023",
       logo: "https://i.ibb.co.com/JkKBH8j/download-removebg-preview-2.png",
       bgColor: "#FFE4E1",
       dotColor: "#FFD700",
