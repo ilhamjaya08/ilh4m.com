@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { DM_Sans } from "next/font/google";
 import Head from "next/head";
@@ -28,6 +28,7 @@ export default function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("newest");
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
+  const [currentPage, setCurrentPage] = useState(0);
 
   // Get unique types from projects data
   const types = ["All", ...Array.from(new Set(projects.map(p => p.type)))];
@@ -44,9 +45,21 @@ export default function Projects() {
       return a.year - b.year;
     });
 
+  const projectsPerPage = 6;
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const currentProjects = filteredProjects.slice(
+    currentPage * projectsPerPage,
+    (currentPage + 1) * projectsPerPage
+  );
+
   const handleImageLoad = (imageUrl: string) => {
     setLoadedImages(prev => ({ ...prev, [imageUrl]: true }));
   };
+
+  // Reset to first page when filters change
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [activeCategory, searchTerm, sortBy]);
 
   return (
     <>
@@ -128,10 +141,11 @@ export default function Projects() {
                 <p className="text-gray-600">There are no projects here</p>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProjects.map((project, index) => (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                  {currentProjects.map((project, index) => (
                   <motion.div
-                    key={`${project.githubUrl}-${index}`}
+                    key={`${project.githubUrl}-${currentPage}-${index}`}
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -199,7 +213,34 @@ export default function Projects() {
                     </div>
                   </motion.div>
                 ))}
-              </div>
+                </div>
+
+                <div className="flex justify-center items-center gap-4">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
+                    disabled={currentPage === 0}
+                    className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+                      ${currentPage === 0 ? 'bg-gray-200 cursor-not-allowed' : 'bg-[#FFB6C1] hover:bg-[#FF69B4]'}`}
+                  >
+                    <Icon icon="mdi:chevron-left" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                  </motion.button>
+                  <div className="text-sm sm:text-base md:text-lg font-medium">
+                    Showing {currentPage * projectsPerPage + 1}-{Math.min((currentPage + 1) * projectsPerPage, filteredProjects.length)} of {filteredProjects.length}
+                  </div>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setCurrentPage(prev => Math.min(totalPages - 1, prev + 1))}
+                    disabled={currentPage === totalPages - 1}
+                    className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+                      ${currentPage === totalPages - 1 ? 'bg-gray-200 cursor-not-allowed' : 'bg-[#FFB6C1] hover:bg-[#FF69B4]'}`}
+                  >
+                    <Icon icon="mdi:chevron-right" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                  </motion.button>
+                </div>
+              </>
             )}
           </motion.div>
         </motion.div>
