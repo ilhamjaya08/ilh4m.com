@@ -9,6 +9,7 @@ const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 export const HeroSection = () => {
   return (
     <motion.section 
+    id="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="min-h-screen flex items-center px-8 pb-8 md:pb-0 bg-[#FFE5E5]"

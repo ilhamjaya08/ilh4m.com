@@ -44,6 +44,7 @@ export const ExperienceSection = () => {
 
   return (
     <motion.section
+    id="experience"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

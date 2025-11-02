@@ -6,12 +6,11 @@ export const Navo = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(768);
   const menuItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Skills', href: '#experience' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' }
   ];
   const totalItems = menuItems.length;
