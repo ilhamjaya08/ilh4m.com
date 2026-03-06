@@ -7,7 +7,6 @@ export const Navo = () => {
   const [windowWidth, setWindowWidth] = useState(768);
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
     { name: 'Skills', href: '#experience' },
     { name: 'Projects', href: '/projects' },
     { name: 'Experience', href: '#experience' },
